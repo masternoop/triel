@@ -3,6 +3,9 @@ package com.Android1;
 import android.app.Activity;
 import android.widget.TextView;
 import android.os.Bundle;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class Android1 extends Activity
 {
@@ -17,4 +20,9 @@ public class Android1 extends Activity
         tv.setText("Hello World!");
         setContentView(tv);
     }
+}
+dependencies {
+    def appCenterSdkVersion = '1.9.0';
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}";
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}";
 }
